@@ -1,0 +1,472 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+td,
+th {
+  cursor: default;
+}
+/* ------------------------------------------------------------------ */
+/* Project fonts */
+@font-face {
+  font-family: "League-Spartan";
+  src: url(fonts/LeagueSpartan-2.220/static/WOFF2/LeagueSpartan-Medium.woff2)
+      format("woff2"),
+    url(fonts/LeagueSpartan-2.220/static/WOFF/LeagueSpartan-Medium.woff)
+      format("woff")
+      url(fonts/LeagueSpartan-2.220/static/TTF/LeagueSpartan-Medium.ttf)
+      format("ttf")
+      url(fonts/LeagueSpartan-2.220/static/OTF/LeagueSpartan-Medium.otf)
+      format("otf");
+  font-family: "Vazir";
+  src: url(fonts/vazir/Vazir.woff2) format("woff2"), url(fonts/vazir/Vazir.woff);
+  
+
+
+  font-family: "League-Spartan-light";
+  src: url(fonts/LeagueSpartan-2.220/static/WOFF2/LeagueSpartan-Light.woff2) format("woff2");
+}
+/*Header style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+div,
+label,
+input {
+  font-family: "League-Spartan", "Vazir";
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+ul li {
+  max-width: 12rem;
+  justify-self: center;
+  display: grid;
+  grid-template:
+    "icon"
+    "line"
+    "dot"
+    "title"
+    "descr" 1fr;
+  justify-items: center;
+  align-items: flex-start;
+  text-align: center;
+}
+.descr {
+  text-align: left;
+  font-variant: all-petite-caps;
+  color: #7077a1;
+}
+ul li .icon {
+  grid-area: icon;
+  width: 6rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 2.5rem;
+  border: 0.4rem solid var(--bgColor);
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45),
+    inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+}
+.icon img {
+  width: 70%;
+  height: 70%;
+}
+ul li::before {
+  content: "";
+  grid-area: line;
+  height: 2rem;
+  border-right: 2px dotted currentColor;
+}
+
+ul li::after {
+  content: "";
+  grid-area: dot;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent-color);
+  justify-self: center;
+  margin-bottom: 0.5rem;
+}
+
+ul li .title {
+  grid-area: title;
+  margin-block: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f6b17a;
+}
+header {
+  padding: 2rem;
+  background-color: #2d3250;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #424769;
+  height: 100vh;
+}
+header h1 {
+  text-align: center;
+  color: #f6b17a;
+  font-weight: bold;
+  font-size: 3rem;
+}
+header h2 {
+  text-align: center;
+  color: #7077a1;
+  font-size: x-large;
+  margin: 1rem 0 0.5rem 0;
+}
+footer {
+  height: 10rem;
+  text-align: center;
+  align-content: center;
+  background-color: #2d3250;
+}
+footer p {
+  color: #7077a1;
+  padding: 2rem;
+}
+footer a {
+  color: #f6b17a;
+  font-size: large;
+}
+
+/* ---------------------------- */
+.chest {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: center;
+  padding: 2rem;
+}
+.chest h2 {
+  font-size: xx-large;
+  color: #f6b17a;
+}
+.chest h4 {
+  margin-top: 0.5rem;
+  font-size: large;
+  color: #1f2337;
+}
+.chest > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+.chest > div > div:first-child {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0.5rem 0 0;
+  background-color: #2d32509a;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.chest > div > div:last-child {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1rem 0 0 0.5rem;
+  background-color: #2d32509a;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+/* START left box */
+
+#language-checkbox{
+ margin-left: -1.5rem;
+}
+
+
+.head-left-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.label-change-lang {
+  color: #f6b17a;
+  font-family: "League-Spartan", "Vazir";
+  font-size: large;
+  margin-bottom: 2rem;
+}
+.main-info-table {
+  background-color: #1f2337a7;
+  border-radius: 20px;
+}
+
+.main-info-table tbody tr td {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #f6b17a;
+  font-family: "League-Spartan", "Vazir";
+  font-size: large;
+}
+
+.main-info-table tbody tr td label {
+  margin-top: 5px;
+  color: #f6b17a;
+  font-family: "League-Spartan", "Vazir";
+  font-size: large;
+}
+.main-info-table tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+.info-table {
+  margin-top: .8rem;
+  background-color: #1f2337a7;
+  border-radius: 20px;
+}
+
+.info-table tbody tr td {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "League-Spartan", "Vazir";
+  color: #f6b17a;
+  font-size:large;
+  width: 33.3%;
+  margin: 5px;
+}
+.info-table tbody tr{
+  margin:0px 5px 0px 5px ;
+}
+
+
+.info-table tbody tr:not(.info-table tbody tr:last-child)  {
+border-bottom: 1px solid #f6b17a;
+}
+
+
+.info-table tbody tr td:not(.info-table tbody tr td:last-child)  {
+  border-right: 1px solid #f6b17a;
+  }
+
+.info-table tbody tr td label {
+  margin-top: 5px;
+  color: #f6b17a;
+  font-size: medium;
+  font-family: "League-Spartan-light", "Vazir";
+  
+
+}
+.info-table tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+/* END left box */
+
+/* START Right box */
+.area-div {
+  display: flex;
+  flex-direction: column;
+}
+.area-div p {
+  color: #f6b17a;
+  font-size: larger;
+  margin-bottom: 1rem;
+}
+#text-input {
+  width: 95%;
+  margin: auto;
+  border: none;
+  border-radius: 20px;
+  height: 25rem;
+  padding: 1rem;
+  background-color: #1f2337a7;
+  color: #f6b17a;
+  font-size: large;
+  font-family: "League-Spartan", "Vazir";
+  transition: all 0.3s;
+}
+#text-input:focus {
+  background-color: #1f2337c6;
+  box-shadow: 0px 0px 10px black;
+  transform: scale(1.01);
+}
+/* END Right box */

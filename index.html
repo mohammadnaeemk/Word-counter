@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word counter</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Word Counter project</h1>
+    <h2>Languages ​​used in this project:</h2>
+    <ul>
+      <li style="--accent-color: #f20071">
+        <div class="icon">
+          <img src="images/html-svgrepo-com.svg" alt="HTML image" />
+        </div>
+        <div class="title">HTML 5</div>
+        <div class="descr">
+          Hypertext Markup Language (HTML) is the standard markup language for
+          documents designed to be displayed in a web browser.
+        </div>
+      </li>
+
+      <li style="--accent-color: #fcba35">
+        <div class="icon">
+          <img src="images/css-svgrepo-com.svg" alt="CSS image" />
+        </div>
+        <div class="title">CSS</div>
+        <div class="descr">
+          Cascading Style Sheets (CSS) is a style sheet language used for
+          specifying the presentation and styling of a document written in a
+          markup language such as HTML or XML
+        </div>
+      </li>
+
+      <li style="--accent-color: #dae438">
+        <div class="icon">
+          <img src="images/js-svgrepo-com.svg" alt="JS image" />
+        </div>
+        <div class="title">Javascript</div>
+        <div class="descr">
+          JavaScript , often abbreviated as JS, is a programming language and
+          core technology of the Web, alongside HTML and CSS.
+        </div>
+      </li>
+    </ul>
+  </header>
+
+
+
+  <div class="chest">
+    <h2>Word Counter</h2>
+    <h4>This tool helps you find the number of characters, words, sentences, etc. in the text you want.</h4>
+    <div>
+        <div>
+            <div class="head-left-box">
+              <label class="label-change-lang"  for="language-checkbox">Change the language to persian</label>
+              <input id="language-checkbox" type="checkbox">
+            </div>
+            <table class="main-info-table">
+                <tbody>
+                    <tr>
+                        <td class="l-number"><span>0</span><label>letter</label></td>
+                        <td class="W-number"><span>0</span><label>Words</label></td>
+                        <td class="S-number"><span>0</span><label>Sentence</label></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="info-table">
+                <tbody>
+                    
+                    <tr>
+                        <td class="p-number"><span>0</span><label>Paragraf</label></td>
+                        <td class="instaPost-number"><span>2200</span><label>Insta post</label></td>
+                        <td class="faceBook-number"><span>63206</span><label>FaceBook post</label></td>
+                    </tr>
+
+                    <tr>
+                        <td class="letWOS-number"><span>0</span><label>letter whith out space</label></td>
+                        <td class="space-number"><span>0</span><label>space</label></td>
+                        <td class="dots-number"><span>0</span><label>Dots</label></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="area-div">
+            <p>In this section, enter the desired text and receive moment by moment informations.</p>
+            <textarea name="text" id="text-input" placeholder="Type text ..."></textarea></div>
+        
+    </div>
+</div>
+
+
+  <footer>
+    <p>
+      This mini-project was developed by Mr. Mohammad Naeem with the link of
+      Github account
+      <a href="https://github.com/mohammadnaeemk/"
+        >github.com/mohammadnaeemk</a
+      >
+    </p>
+  </footer>
+
+    <script src="action.js"></script>
+</body>
+</html>
